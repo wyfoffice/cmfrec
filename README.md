@@ -1,5 +1,110 @@
 # Collective Matrix Factorization
 
+Many thanks to david-cortes!
+
+In this branch, I changed the loss function in an implicit feedback way http://yifanhu.net/PUB/cf.pdf. As in many case, the number we buy a commodity is not necessarily related to my preference towards this commodity. For exmaple, generally, we would buy several pairs of socks, while we only buy one smart phone. In implicit feedback, the number of an item that purchased by a user gives us the corresponding confidence that he/she would like it.
+
+The loss function is in this form:
+
+
+@font-face{
+font-family:"Times New Roman";
+}
+
+@font-face{
+font-family:"宋体";
+}
+
+@font-face{
+font-family:"Calibri";
+}
+
+p.MsoNormal{
+mso-style-name:Normal;
+mso-style-parent:"";
+margin:0pt;
+margin-bottom:.0001pt;
+mso-pagination:none;
+text-align:justify;
+text-justify:inter-ideograph;
+font-family:Calibri;
+mso-fareast-font-family:宋体;
+mso-bidi-font-family:'Times New Roman';
+font-size:10.5000pt;
+mso-font-kerning:1.0000pt;
+}
+
+p.MsoFooter{
+mso-style-name:Footer;
+mso-style-noshow:yes;
+margin:0pt;
+margin-bottom:.0001pt;
+layout-grid-mode:char;
+mso-pagination:none;
+text-align:left;
+font-family:Calibri;
+mso-fareast-font-family:宋体;
+mso-bidi-font-family:'Times New Roman';
+font-size:9.0000pt;
+mso-font-kerning:1.0000pt;
+}
+
+p.MsoHeader{
+mso-style-name:Header;
+mso-style-noshow:yes;
+margin:0pt;
+margin-bottom:.0001pt;
+border-bottom:1.0000pt solid windowtext;
+mso-border-bottom-alt:0.7500pt solid windowtext;
+padding:0pt 0pt 1pt 0pt ;
+layout-grid-mode:char;
+mso-pagination:none;
+text-align:center;
+font-family:Calibri;
+mso-fareast-font-family:宋体;
+mso-bidi-font-family:'Times New Roman';
+font-size:9.0000pt;
+mso-font-kerning:1.0000pt;
+}
+
+span.msoIns{
+mso-style-type:export-only;
+mso-style-name:"";
+text-decoration:underline;
+text-underline:single;
+color:blue;
+}
+
+span.msoDel{
+mso-style-type:export-only;
+mso-style-name:"";
+text-decoration:line-through;
+color:red;
+}
+
+table.MsoNormalTable{
+mso-style-name:"Table Normal";
+mso-style-parent:"";
+mso-style-noshow:yes;
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-padding-alt:0.0000pt 5.4000pt 0.0000pt 5.4000pt;
+mso-para-margin:0pt;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-family:'Times New Roman';
+font-size:10.0000pt;
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;
+}
+@page{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}@page Section0{
+}
+div.Section0{page:Section0;}
+
+
+
 Python implementation of collective matrix factorization, based on the paper _Relational learning via collective matrix factorization (A. Singh, 2008)_, with some enhancements. This is a collaborative filtering model for recommender systems that takes as input explicit item ratings and side information about users and/or items. The overall idea was extended here to also be able to do cold-start recommendations (of users and items that were not in the training data). Implementation is done in TensorFlow and optimization is with L-BFGS.
 
 The extended version of the paper ("Relational learning via Collective Matrix Factorization") can be downloaded here:
