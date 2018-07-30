@@ -1,5 +1,12 @@
 # Collective Matrix Factorization
 
+Many thanks to david-cortes!
+
+The original library is using an explicit feedback loss function which regards the ratins in the matrix are the preferences of users. However, in many cases, the ratings are not necessarily related to preference. For example, we may buy 10 pairs of socks while only buy one smart phone. So in Hu's paper http://yifanhu.net/PUB/cf.pdf , Hu said that the value of ratings, or in other words, the number of purchase show the confidence that we believe the user likes this item.
+
+# Usage
+After install this library using pip install cmfrec, you then replace the original __init__.py with this website's version
+
 Python implementation of collective matrix factorization, based on the paper _Relational learning via collective matrix factorization (A. Singh, 2008)_, with some enhancements. This is a collaborative filtering model for recommender systems that takes as input explicit item ratings and side information about users and/or items. The overall idea was extended here to also be able to do cold-start recommendations (of users and items that were not in the training data). Implementation is done in TensorFlow and optimization is with L-BFGS.
 
 The extended version of the paper ("Relational learning via Collective Matrix Factorization") can be downloaded here:
