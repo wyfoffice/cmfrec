@@ -1,5 +1,7 @@
 # Collective Matrix Factorization
 
+Deleted the changed file, as the code should belong to my intern company.
+
 Many thanks to david-cortes!
 
 The original library is using an explicit feedback loss function which regards the ratins in the matrix are the preferences of users. However, in many cases, the ratings are not necessarily related to preference. For example, we may buy 10 pairs of socks while only buy one smart phone. So in Hu's paper http://yifanhu.net/PUB/cf.pdf , Hu said that the value of ratings, or in other words, the number of purchase show the confidence that we believe the user likes this item.
